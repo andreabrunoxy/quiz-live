@@ -1,0 +1,28 @@
+:root{--bg:#f6f4ef;--ink:#1c2340;--muted:#6b7089;--line:#d9d6cc;--a:#e5484d;--b:#2f6fed;--c:#e9a200;--d:#1f9d6b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);margin:.2em 0 .4em;letter-spacing:-.02em}
+h2{font-size:1.4rem;margin:.2em 0 .6em}
+input{width:100%;font-size:1.2rem;padding:14px;border:2px solid var(--ink);border-radius:10px;background:#fff}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:14px 20px;background:var(--ink);color:#fff;cursor:pointer}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.opt{min-height:96px;font-size:1.2rem;color:#fff}
+.o0{background:var(--a)}.o1{background:var(--b)}.o2{background:var(--c);color:#1c2340}.o3{background:var(--d)}
+.opt.wrong{opacity:.3}.opt.right{outline:5px solid var(--ink)}
+.timer{font-size:3rem;font-weight:800;font-variant-numeric:tabular-nums}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar>i{display:block;height:100%;background:var(--ink);transition:width .3s linear}
+.muted{color:var(--muted)}
+table{width:100%;border-collapse:collapse}td,th{padding:10px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.big{font-size:4rem;font-weight:800;letter-spacing:.08em}
+.err{color:var(--a);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0}
+.card input[type=text]{font-size:1rem;padding:10px;margin:4px 0}
+.optrow{display:flex;gap:8px;align-items:center}.optrow input[type=radio]{width:22px;height:22px;flex:none}
+.ok{color:var(--d);font-weight:600}
